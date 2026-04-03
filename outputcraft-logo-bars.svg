@@ -1,0 +1,26 @@
+<svg width="520" height="100" viewBox="0 0 520 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Output bars — 5 vertical bars at maximum, evenly spaced -->
+  <!-- All equal height = precision + max output -->
+  <rect x="10" y="14" width="11" height="72" rx="2.5" fill="#FF5C00"/>
+  <rect x="27" y="14" width="11" height="72" rx="2.5" fill="#FF5C00"/>
+  <rect x="44" y="14" width="11" height="72" rx="2.5" fill="#FF5C00"/>
+  <rect x="61" y="14" width="11" height="72" rx="2.5" fill="#FF5C00"/>
+  <rect x="78" y="14" width="11" height="72" rx="2.5" fill="#FF5C00"/>
+
+  <!-- Wordmark -->
+  <text
+    x="104"
+    y="68"
+    font-family="'Bricolage Grotesque', 'Space Grotesk', system-ui, sans-serif"
+    font-weight="800"
+    font-size="48"
+    fill="#0A0A0A"
+    letter-spacing="-2"
+  >OUTPUTCRAFT</text>
+</svg>

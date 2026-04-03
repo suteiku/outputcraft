@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <defs>
+    <!-- Top face: orange, slightly lighter toward top-right (light source) -->
+    <linearGradient id="g-top" x1="88" y1="6" x2="12" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF5C00"/>
+      <stop offset="100%" stop-color="#FF7A30"/>
+    </linearGradient>
+    <!-- Right face: dark gray, lighter at top -->
+    <linearGradient id="g-right" x1="0" y1="28" x2="0" y2="94" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2E2E2E"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <!-- Left face: darkest -->
+    <linearGradient id="g-left" x1="0" y1="28" x2="0" y2="94" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#191919"/>
+      <stop offset="100%" stop-color="#040404"/>
+    </linearGradient>
+    <!-- Clip top face for precision grid -->
+    <clipPath id="clip-top">
+      <polygon points="50,6 88,28 50,50 12,28"/>
+    </clipPath>
+  </defs>
+
+  <!-- Left face (darkest — receives no direct light) -->
+  <polygon points="12,28 50,50 50,94 12,72" fill="url(#g-left)"/>
+
+  <!-- Right face (medium — receives side light) -->
+  <polygon points="88,28 88,72 50,94 50,50" fill="url(#g-right)"/>
+
+  <!-- Top face (orange — receives direct light) -->
+  <polygon points="50,6 88,28 50,50 12,28" fill="url(#g-top)"/>
+
+  <!-- Isometric precision grid lines on top face (2 axis × 2 lines = craft/blueprint feel) -->
+  <g clip-path="url(#clip-top)" stroke="white" stroke-width="0.7" fill="none">
+    <!-- Axis A: parallel to right edge -->
+    <line x1="37" y1="13" x2="75" y2="35" opacity="0.20"/>
+    <line x1="25" y1="21" x2="63" y2="43" opacity="0.12"/>
+    <!-- Axis B: parallel to left edge -->
+    <line x1="63" y1="13" x2="25" y2="35" opacity="0.20"/>
+    <line x1="75" y1="21" x2="37" y2="43" opacity="0.12"/>
+  </g>
+
+  <!-- Vertical edge separating right/left faces -->
+  <line x1="50" y1="50" x2="50" y2="94" stroke="#1E1E1E" stroke-width="0.8"/>
+
+  <!-- Bottom-left and bottom-right outer edges (subtle) -->
+  <line x1="12" y1="72" x2="50" y2="94" stroke="#111" stroke-width="0.6" opacity="0.6"/>
+  <line x1="88" y1="72" x2="50" y2="94" stroke="#2A2A2A" stroke-width="0.6" opacity="0.6"/>
+
+  <!-- Top highlight edges (ambient bounce on orange face rim) -->
+  <line x1="50" y1="6" x2="88" y2="28" stroke="#FFAA70" stroke-width="1" opacity="0.4"/>
+  <line x1="50" y1="6" x2="12" y2="28" stroke="#FFAA70" stroke-width="1" opacity="0.4"/>
+
+  <!-- Apex precision dot — the craft touch -->
+  <circle cx="50" cy="6" r="2.2" fill="#FFB880" opacity="0.85"/>
+</svg>

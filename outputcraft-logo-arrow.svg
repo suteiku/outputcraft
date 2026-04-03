@@ -1,0 +1,21 @@
+<svg width="520" height="100" viewBox="0 0 520 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Arrow cursor mark -->
+  <polygon points="10,10 10,90 66,50" fill="#FF5C00"/>
+
+  <!-- Wordmark -->
+  <text
+    x="88"
+    y="68"
+    font-family="'Bricolage Grotesque', 'Space Grotesk', system-ui, sans-serif"
+    font-weight="800"
+    font-size="48"
+    fill="#0A0A0A"
+    letter-spacing="-2"
+  >OUTPUTCRAFT</text>
+</svg>
