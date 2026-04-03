@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useEffect } from 'react'
 
 function PhoneIcon() {
   return (
@@ -28,24 +28,74 @@ function PinIcon() {
 }
 
 export default function Contact() {
-  const [sent, setSent] = useState(false)
+  useEffect(() => {
+    // Avoid double-init on hot reload
+    if (window.Cal && window.Cal.loaded) {
+      window.Cal('inline', {
+        elementOrSelector: '#cal-embed',
+        calLink: 'bruno.crp/30min',
+        layout: 'month_view',
+      })
+      window.Cal('ui', {
+        theme: 'dark',
+        styles: { branding: { brandColor: '#FF4F0D' } },
+        hideEventTypeDetails: false,
+        layout: 'month_view',
+      })
+      return
+    }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    setSent(true)
-    setTimeout(() => setSent(false), 3000)
-  }
+    ;(function (C, A, L) {
+      const p = (a, ar) => { a.q.push(ar) }
+      const d = C.document
+      C.Cal = C.Cal || function (...args) {
+        const cal = C.Cal
+        if (!cal.loaded) {
+          cal.ns = {}
+          cal.q = cal.q || []
+          d.head.appendChild(d.createElement('script')).src = A
+          cal.loaded = true
+        }
+        if (args[0] === L) {
+          const api = (...a) => p(api, a)
+          const ns = args[1]
+          api.q = api.q || []
+          if (typeof ns === 'string') {
+            cal.ns[ns] = cal.ns[ns] || api
+            p(cal.ns[ns], args)
+            p(cal, ['-', ns, args])
+          } else { p(cal, args) }
+          return
+        }
+        p(cal, args)
+      }
+    })(window, 'https://app.cal.com/embed/embed.js', 'init')
+
+    window.Cal('init', { origin: 'https://cal.com' })
+    window.Cal('inline', {
+      elementOrSelector: '#cal-embed',
+      calLink: 'bruno.crp/30min',
+      layout: 'month_view',
+    })
+    window.Cal('ui', {
+      theme: 'dark',
+      styles: { branding: { brandColor: '#FF4F0D' } },
+      hideEventTypeDetails: false,
+      layout: 'month_view',
+    })
+  }, [])
 
   return (
     <section id="contact" className="contact-section" aria-labelledby="contact-heading">
       <div className="container">
         <div className="contact-inner">
+
           <div className="contact-left reveal">
             <span className="label">Contact</span>
-            <h2 id="contact-heading">Parlons de<br />votre projet.</h2>
+            <h2 id="contact-heading">Réservez un<br />appel de 30 min.</h2>
             <p>
-              Dites-moi ce que vous faites, où vous êtes et ce que vous voulez accomplir.
-              Je vous réponds sous 24h avec une première analyse et une estimation.
+              On fait le point sur votre projet, votre site actuel et vos objectifs.
+              Appel gratuit, sans engagement — et on arrive préparés.
             </p>
 
             <div className="contact-info">
@@ -64,53 +114,10 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="contact-form reveal reveal-delay-2">
-            <p className="form-title">Demande de devis gratuit</p>
-            <form onSubmit={handleSubmit} noValidate>
-              <div className="form-group">
-                <label htmlFor="name">Votre nom *</label>
-                <input type="text" id="name" name="name" placeholder="Jean Dupont" required autoComplete="name" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="email">Email *</label>
-                <input type="email" id="email" name="email" placeholder="jean@entreprise.fr" required autoComplete="email" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="activity">Votre activité *</label>
-                <input type="text" id="activity" name="activity" placeholder="Ex : Restaurant, plombier, coach..." required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="budget">Offre souhaitée</label>
-                <select id="budget" name="budget">
-                  <option value="">-- Choisir une offre --</option>
-                  <option value="starter">Starter — 800€ à 1 200€</option>
-                  <option value="standard">Standard — 1 800€ à 2 500€ ★</option>
-                  <option value="premium">Premium — 3 500€ à 5 500€</option>
-                  <option value="unknown">Je ne sais pas encore</option>
-                </select>
-              </div>
-              <div className="form-group">
-                <label htmlFor="message">Parlez-nous de votre projet</label>
-                <textarea id="message" name="message" placeholder="Décrivez votre projet en quelques mots..." />
-              </div>
-              <button
-                type="submit"
-                className="btn btn-primary form-submit"
-                style={sent ? { background: '#00C851' } : {}}
-                disabled={sent}
-              >
-                {sent ? 'Envoyé ✓' : (
-                  <>
-                    Envoyer ma demande
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                  </>
-                )}
-              </button>
-              <p className="form-note">Réponse garantie sous 24h · Devis gratuit et sans engagement</p>
-            </form>
+          <div className="cal-embed-wrap reveal reveal-delay-2">
+            <div id="cal-embed" />
           </div>
+
         </div>
       </div>
     </section>

@@ -1,4 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background with rounded corners -->
+  <rect width="100" height="100" rx="22" fill="#0A0A0A"/>
   <defs>
     <linearGradient id="i-top" x1="88" y1="6" x2="12" y2="28" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#FF5C00"/>
