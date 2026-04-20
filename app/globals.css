@@ -595,13 +595,14 @@ section { padding: 100px 0; }
 .cal-embed-wrap {
   border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 1px solid var(--border);
-  background: var(--black-2);
-  min-height: 600px;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  background: #ffffff;
+  min-height: 680px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06);
 }
 .cal-embed-wrap #cal-embed {
   width: 100%;
-  min-height: 600px;
+  min-height: 680px;
 }
 .contact-left h2 { font-size: clamp(2rem, 3.5vw, 3rem); letter-spacing: -0.03em; margin-bottom: 20px; }
 .contact-left p { font-size: 1rem; color: var(--cream-dim); line-height: 1.75; margin-bottom: 36px; }

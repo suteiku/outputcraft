@@ -37,8 +37,8 @@ export default function Contact() {
         layout: 'month_view',
       })
       window.Cal('ui', {
-        theme: 'dark',
-        styles: { branding: { brandColor: '#FF4F0D' } },
+        theme: 'light',
+        styles: { branding: { brandColor: '#111111' } },
         hideEventTypeDetails: false,
         layout: 'month_view',
       })
@@ -78,7 +78,7 @@ export default function Contact() {
       layout: 'month_view',
     })
     window.Cal('ui', {
-      theme: 'dark',
+      theme: 'light',
       styles: { branding: { brandColor: '#FF4F0D' } },
       hideEventTypeDetails: false,
       layout: 'month_view',
