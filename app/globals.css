@@ -589,23 +589,33 @@ section { padding: 100px 0; }
   background: radial-gradient(ellipse 60% 60% at 50% 100%, rgba(255,79,13,0.12) 0%, transparent 70%);
   pointer-events: none;
 }
-.contact-inner { display: grid; grid-template-columns: 2fr 3fr; gap: 64px; align-items: start; }
+.contact-header { text-align: center; max-width: 720px; margin: 0 auto 48px; }
+.contact-header .label { display: inline-block; margin-bottom: 16px; }
+.contact-header h2 { font-size: clamp(2rem, 3.5vw, 3rem); letter-spacing: -0.03em; margin-bottom: 20px; }
+.contact-header p { font-size: 1rem; color: var(--cream-dim); line-height: 1.75; }
 
-/* Cal.com embed wrapper */
+/* Cal.com embed wrapper — full width, matching cal.com reference */
 .cal-embed-wrap {
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid rgba(17, 17, 17, 0.08);
   background: #ffffff;
   min-height: 720px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .cal-embed-wrap #cal-embed {
   width: 100%;
   min-height: 720px;
 }
-.contact-left h2 { font-size: clamp(2rem, 3.5vw, 3rem); letter-spacing: -0.03em; margin-bottom: 20px; }
-.contact-left p { font-size: 1rem; color: var(--cream-dim); line-height: 1.75; margin-bottom: 36px; }
-.contact-info { display: flex; flex-direction: column; gap: 16px; }
+
+/* Contact info row — below cal embed */
+.contact-info-row {
+  display: flex; justify-content: center; align-items: center;
+  flex-wrap: wrap; gap: 40px;
+  margin-top: 48px;
+}
 .contact-info-item { display: flex; align-items: center; gap: 14px; font-size: 0.9rem; color: var(--cream-dim); }
 .contact-info-icon {
   width: 40px; height: 40px; background: var(--orange-dim);

@@ -88,36 +88,32 @@ export default function Contact() {
   return (
     <section id="contact" className="contact-section" aria-labelledby="contact-heading">
       <div className="container">
-        <div className="contact-inner">
+        <div className="contact-header reveal">
+          <span className="label">Contact</span>
+          <h2 id="contact-heading">Réservez un appel de 30 min.</h2>
+          <p>
+            On fait le point sur votre projet, votre site actuel et vos objectifs.
+            Appel gratuit, sans engagement — et on arrive préparés.
+          </p>
+        </div>
 
-          <div className="contact-left reveal">
-            <span className="label">Contact</span>
-            <h2 id="contact-heading">Réservez un<br />appel de 30 min.</h2>
-            <p>
-              On fait le point sur votre projet, votre site actuel et vos objectifs.
-              Appel gratuit, sans engagement — et on arrive préparés.
-            </p>
+        <div className="cal-embed-wrap reveal reveal-delay-2">
+          <div id="cal-embed" />
+        </div>
 
-            <div className="contact-info">
-              <div className="contact-info-item">
-                <div className="contact-info-icon"><PhoneIcon /></div>
-                <a href="tel:+33600000000">+33 6 00 00 00 00</a>
-              </div>
-              <div className="contact-info-item">
-                <div className="contact-info-icon"><MailIcon /></div>
-                <a href="mailto:brunocadilhe3000@gmail.com">brunocadilhe3000@gmail.com</a>
-              </div>
-              <div className="contact-info-item">
-                <div className="contact-info-icon"><PinIcon /></div>
-                <span>Paris &amp; Île-de-France · France entière</span>
-              </div>
-            </div>
+        <div className="contact-info-row reveal reveal-delay-3">
+          <div className="contact-info-item">
+            <div className="contact-info-icon"><PhoneIcon /></div>
+            <a href="tel:+33600000000">+33 6 00 00 00 00</a>
           </div>
-
-          <div className="cal-embed-wrap reveal reveal-delay-2">
-            <div id="cal-embed" />
+          <div className="contact-info-item">
+            <div className="contact-info-icon"><MailIcon /></div>
+            <a href="mailto:brunocadilhe3000@gmail.com">brunocadilhe3000@gmail.com</a>
           </div>
-
+          <div className="contact-info-item">
+            <div className="contact-info-icon"><PinIcon /></div>
+            <span>Paris &amp; Île-de-France · France entière</span>
+          </div>
         </div>
       </div>
     </section>
