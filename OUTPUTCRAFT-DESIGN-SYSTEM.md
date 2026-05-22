@@ -35,7 +35,7 @@
 | **Nom** | OUTPUTCRAFT |
 | **Domaine** | outputcraft.com |
 | **Fondateur** | Bruno Cadilhe |
-| **Email** | brunocadilhe3000@gmail.com |
+| **Email** | bruno.crespo75@gmail.com |
 | **Téléphone** | +33 6 00 00 00 00 |
 | **Localisation** | Paris, Île-de-France (France entière) |
 | **Positionnement** | Sites web sur mesure, ultra-rapides, livrés en 3 semaines max |
@@ -798,7 +798,7 @@ function toggleFaq(btn) {
             <div class="contact-info-icon">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
-            <a href="mailto:brunocadilhe3000@gmail.com">brunocadilhe3000@gmail.com</a>
+            <a href="mailto:bruno.crespo75@gmail.com">bruno.crespo75@gmail.com</a>
           </div>
           <div class="contact-info-item">
             <div class="contact-info-icon">
@@ -895,7 +895,7 @@ function toggleFaq(btn) {
       <div class="footer-col">
         <h4>Contact</h4>
         <ul class="footer-links">
-          <li><a href="mailto:brunocadilhe3000@gmail.com">brunocadilhe3000@gmail.com</a></li>
+          <li><a href="mailto:bruno.crespo75@gmail.com">bruno.crespo75@gmail.com</a></li>
           <li><a href="tel:+33600000000">+33 6 00 00 00 00</a></li>
         </ul>
       </div>
@@ -1169,4 +1169,4 @@ Remplacer ces placeholders pour chaque nouveau client :
 
 ---
 
-*OUTPUTCRAFT — outputcraft.com · brunocadilhe3000@gmail.com · Mis à jour le 3 avril 2026*
+*OUTPUTCRAFT — outputcraft.com · bruno.crespo75@gmail.com · Mis à jour le 3 avril 2026*

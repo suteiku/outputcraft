@@ -181,7 +181,7 @@ Je me concentre d'abord sur les secteurs où j'ai accumulé la connaissance mét
 
 **Nom de l'agence :** WEB AUTO (ou Agence WEB AUTO)
 **Fondateur :** Bruno Cadilhe
-**Email de contact :** brunocadilhe3000@gmail.com
+**Email de contact :** bruno.crespo75@gmail.com
 **Localisation :** Paris
 **Langue :** Français uniquement
 **Statut :** Entrepreneur individuel (en cours de structuration)

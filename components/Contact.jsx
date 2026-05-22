@@ -108,7 +108,7 @@ export default function Contact() {
           </div>
           <div className="contact-info-item">
             <div className="contact-info-icon"><MailIcon /></div>
-            <a href="mailto:brunocadilhe3000@gmail.com">brunocadilhe3000@gmail.com</a>
+            <a href="mailto:bruno.crespo75@gmail.com">bruno.crespo75@gmail.com</a>
           </div>
           <div className="contact-info-item">
             <div className="contact-info-icon"><PinIcon /></div>
