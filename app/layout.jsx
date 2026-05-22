@@ -51,7 +51,7 @@ const jsonLd = {
   name: 'OUTPUTCRAFT',
   description: "Agence de création de sites web professionnels sur mesure, orientés conversion, pour toute entreprise en Île-de-France et en France.",
   url: 'https://outputcraft.com',
-  email: 'brunocadilhe3000@gmail.com',
+  email: 'bruno.crespo75@gmail.com',
   founder: { '@type': 'Person', name: 'Bruno Cadilhe' },
   address: { '@type': 'PostalAddress', addressLocality: 'Paris', addressRegion: 'Île-de-France', addressCountry: 'FR' },
   areaServed: ['Paris', 'Île-de-France', 'France'],
