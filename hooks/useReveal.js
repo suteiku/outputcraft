@@ -3,6 +3,16 @@ import { useEffect } from 'react'
 
 export function useReveal() {
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'))
+      return
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'))
+      return
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
